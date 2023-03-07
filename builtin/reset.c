@@ -370,7 +370,7 @@ int cmd_reset(int argc, const char **argv, const char *prefix)
 
 	if (read_from_stdin) {
 		warning(_("--stdin is deprecated, please use --pathspec-from-file=- instead"));
-		pathspec_from_file = "-";
+		pathspec_from_file = xstrdup("-");
 		if (nul_term_line)
 			pathspec_file_nul = 1;
 	}
