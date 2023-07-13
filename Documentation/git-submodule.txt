@@ -160,16 +160,14 @@ checked out in the submodule.
 	merge;; the commit recorded in the superproject will be merged
 	    into the current branch in the submodule.
 
-The following 'update' procedures are only available via the
-`submodule.<name>.update` configuration variable:
-
-	custom command;; arbitrary shell command that takes a single
-	    argument (the sha1 of the commit recorded in the
-	    superproject) is executed. When `submodule.<name>.update`
-	    is set to '!command', the remainder after the exclamation mark
-	    is the custom command.
-
 	none;; the submodule is not updated.
+
+	custom command;; When the `submodule.<name>.update`
+	    configuration variable is set to `!custom command`, the
+	    object name of the commit recorded in the superproject
+	    for the submodule is appended to the `custom command`
+	    string and gets executed.  Note that this mechanism
+	    cannot be used in the `.gitmodules` file.
 
 If the submodule is not yet initialized, and you just want to use the
 setting as stored in `.gitmodules`, you can automatically initialize the
