@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <style>
+        .company-name {
+            text-align: center;
+            background: yellow; 
+            color: red;
+            font-size: 30px;
+            height: 50px;
+            width: 200px; 
+            border-radius: 4px;
+        }
+        
+        .bill {
+            text-align: center;
+            background: blue; 
+            color: black;
+            font-size: 30px;
+            height: 50px;
+            width: 200px; 
+            border-radius: 4px;
+        }
+
+        .code {
+             text-align: center;
+            background: lightWhite; 
+            color: black;
+            font-size: 30px;
+            height: 50px;
+            width: 200px; 
+            border-radius: 4px;
+        }
+        
+        .gate {
+            text-align: center;
+        }
+        
+        .table-class {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #table-id th, #table-id td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <table class="table-class" id="table-id">
+        <tr>
+            <th colspan="5" class="company-name">CÔNG TY CỔ PHẦN 3 NHẤT EXPRESS</th>
+            <th colspan="7" class="bill">BILL OF CONSIGNMENT</th>
+            <th colspan="5" class="code">MÃ CODE ghi tại đây</th>
+        </tr>
+        <tr>
+            <td>STT</td>
+            <td>Tìm kiếm</td>
+            <td colspan="3"> ...</td>
+            <td rowspan="24" class="color-lightBlue"></td>
+            <td colspan="3">Dịch vụ</td>
+            <td>CPN</td>
+            <td>Hoả tốc</td>
+            <td>TMĐT</td>
+            <td>Đường bộ</td>
+            <td>Air trong ngày</td>
+            <td>Air ngày sau</td>
+            <td>Hàng lô</td>
+            <td>Hàng hoá không tách rời</td>
+        </tr>
+        <tr>
+          
+            <td rowspan="8" style="writing-mode: vertical-rl; background-color: green; color: white; font-weight: bold;">NGƯỜI GỬI</td>
+            <td>Họ tên</td>
+            <td rowspan="2" colspan="3" class="text"><input type="text" id="name-input"></td>
+            <td rowspan="2" colspan="3">Loại hàng</td>
+            <td colspan="3" class="document">Tài liệu (Document)</td>
+            <td><input type="checkbox" id="document-checkbox" class="checkbox" onchange="handleCheckboxChange(this)"></td>
+            <td colspan="3" class="gift">Quà tặng (Gift)</td>
+            <td><input type="checkbox" id="gift-checkbox" class="checkbox" onchange="handleCheckboxChange(this)"></td>
+        </tr>
+        <tr>
+            <td>(Name)</td>
+            <td colspan="3" class="merchandise">Hàng hóa (Merchandise)</td>
+            <td><input type="checkbox" id="merchandise-checkbox" class="checkbox" onchange="handleCheckboxChange(this)"></td>
+            <td colspan="3" class="sample">Hàng mẫu (Sample)</td>
+            <td><input type="checkbox" id="sample-checkbox" class="checkbox" onchange="handleCheckboxChange(this)"></td>
+        </tr>
+
+         <tr>
+            <td>Công ty</td>
+            <td rowspan="2" colspan="3">...</td>
+            <td colspan="3" >Số kiện hàng</td>
+            <td rowspan="2" class="text">
+            <input type="number" id="quantity-input" name="quantity" min="0" max="1000" step="1" value="0"></td>
+            <td colspan="2">Trọng lượng</td>
+            <td colspan="2" rowspan="2"  class="text">
+            <input type="number" id="weight-input" name="weight" min="0" max="1000" step="1" value="0"></td>
+            <td>Quy đổi</td>
+            <td rowspan="2">...</td>
+            <td rowspan="2">Kg</td>
+        </tr>
+
+        <tr>
+            <td>( Copany )</td>
+            <td colspan="3">(Nu. of pieces)</td>
+            <td colspan="2">(Weight )</td>
+            <td>(Convert)</td>
+        </tr>
+
+        <tr>
+            <td>Địa chỉ </td>
+            <td colspan="3" rowspan="2">....</td>
+            <td colspan="3"> Kích thước</td>
+            <td>Dài</td>
+            <td>Rộng</td>
+            <td>Cao</td>
+            <td colspan="2">Hệ số</td>
+            <td colspan="2" rowspan="2"> ...</td>
+            <td   colspan="2">KG</td>
+        </tr>
+
+        <tr>
+          <td>( Address)</td>
+          <td colspan="3">( dimention )</td>
+          <td class="text">
+            <input type="number" id="length-input" name="length" min="0" max="1000" step="1" value="0"></td>
+    
+            <td class="text">
+            <input type="number" id="width-input" name="width" min="0" max="1000" step="1" value="0"></td>
+        
+            <td class="text">
+            <input type="number" id="height-input" name="height" min="0" max="1000" step="1" value="0"></td>
+          <td>
+          
+            <td class="text">
+            <input type="number" id="coefficient-input" name="coefficient" min="0" max="1000" step="1000" value="0"></td>
+          <td>
+        </tr>
+
+        <tr>
+            <td>Điện thoại</td>
+            <td colspan="3" rowspan="2"> ...</td>
+        </tr>
+
+        <tr>
+            <td>( Phone )</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
